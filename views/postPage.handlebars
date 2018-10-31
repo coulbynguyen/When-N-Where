@@ -1,0 +1,60 @@
+{{> header}}
+
+
+      <section id="posts">
+    {{#each postItems}}
+       {{> post}}
+    {{/each}}
+    
+    <button type="button" id="addEvent"><i class="fa fa-calendar-o" aria-hidden="true"></i></button>
+
+    <button type="button" id="toTop"><a href="#top" alt="To Top"> <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+
+  <!--  Below is the modal for adding a new event-->
+  <div id="add-event-modal" class="hidden">
+    <div class="modal-dialog">
+
+      <div class="modal-header">
+        <h3>Add Event to When'N'Where</h3>
+        <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="post-input-element">
+          <label for="event-name-input">Name Of Event</label>
+          <input type="text" id="event-name-input"></input>
+        </div>
+
+        <div class="post-input-element">
+          <label for="event-location-input">Location Of Event</label>
+          <input type="text" id="event-location-input"></input>
+        </div>
+
+        <div class="post-input-element">
+          <label for="event-photo-input">Photo URL</label>
+          <input type="text" id="event-photo-input">
+        </div>
+
+        <div class="post-input-element">
+          <label for="event-date-input">Date of Event</label>
+          <input type="date" id="event-date-input">
+        </div>
+
+        <div class="post-input-element">
+          <label for="event-time-input">Time of Event</label>
+          <input type="time" id="event-time-input">
+        </div>
+
+        <div class="post-input-element">
+          <label for="event-description-input">Short Description</label>
+          <input type="text" id="event-description-input">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+        <button type="button" id="modal-accept" class="action-button">Create Post</button>
+      </div>
+    </div>
+  </div>
